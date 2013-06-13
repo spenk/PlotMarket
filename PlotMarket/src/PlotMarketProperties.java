@@ -9,11 +9,7 @@ public class PlotMarketProperties {
 	public boolean SignDelete;
 	
 	public PlotMarketProperties(){
-		new File("plugins/config").mkdir();
-		PropertiesFile f = new PropertiesFile("plugins/config/PlotMarket.properties");
-		this.removePlayersAfter = f.getBoolean("Remove_players_after_buy",true);
-		this.autofiller = f.getBoolean("Auto_filler",true);
-		this.protection = f.getString("Protection_Type(cuboids_cuboids2_realms)","Cuboids2");
+		load();
 	}
 
 	public void load() {

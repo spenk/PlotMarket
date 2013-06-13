@@ -4,7 +4,7 @@ import java.util.logging.Logger;
 public class PlotMarket extends Plugin{
 	
 	String name = "PlotMarket";
-	String version = " version 1.1";
+	String version = " version 1.2";
 	String author = " by Spenk";
 	String enabled = " is Enabled.";
 	String disabled = " is Disabled.";

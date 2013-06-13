@@ -2,6 +2,7 @@
 public class PlotMarketPlayerListener extends PluginListener{
 	
 	PlotMarketSignProcessor signprocessor = new PlotMarketSignProcessor();
+	PlotMarketExampleProcessor exampleprocessor = new PlotMarketExampleProcessor();
 	PlotMarketClickProcessor clickprocessor = new PlotMarketClickProcessor();
 	PlotMarketDestroyProcessor destroyprocessor = new PlotMarketDestroyProcessor();
 
@@ -9,6 +10,10 @@ public class PlotMarketPlayerListener extends PluginListener{
 		if (sign.getText(0).equalsIgnoreCase("[PlotMarket]") || sign.getText(0).equalsIgnoreCase("§3[PlotMarket]")) {
 			return signprocessor.processSignCreationEvent(sign, player);
 		}
+		if (sign.getText(0).equalsIgnoreCase("[PlotExample]")|| sign.getText((0)).equalsIgnoreCase("§4[PlotExample]")){
+			return exampleprocessor.processSignCreationEvent(sign, player);
+		}
+		
 		return false;
 
 	}
