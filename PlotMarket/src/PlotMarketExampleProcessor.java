@@ -14,17 +14,18 @@ public class PlotMarketExampleProcessor {
 	}
 	
 	public boolean processSignClickEvent(Player player, Sign sign){
-		if (!player.canUseCommand("/plotmarketuse") || !player.canUseCommand("/plotmarketadmin")){
+		if (!player.canUseCommand("/plotmarketuse") && !player.canUseCommand("/plotmarketadmin")){
 			player.notify("§f[§3PlotMarket§f]§c - You can't view this tutorial!");
 			return true;
-		}
+		}else{
 		printTut(player);
+		}
 		return false;
 	}
 	
 	public boolean processBlockHitEvent(Player player, Block block, Sign sign) {
 		if (block.getStatus() == 0) {
-			if (!player.canUseCommand("/plotmarketuse") || !player.canUseCommand("/plotmarketadmin")){
+			if (!player.canUseCommand("/plotmarketuse") && !player.canUseCommand("/plotmarketadmin")){
 				player.notify("§f[§3PlotMarket§f]§c - You can't view this tutorial!");
 			return true;
 		}else{
@@ -33,7 +34,7 @@ public class PlotMarketExampleProcessor {
 		}
 		if (block.getStatus() == 2){
 			if (!player.canUseCommand("/plotmarketadmin")){
-				player.notify("You cant break this sign!");
+				player.notify("You can't break this sign!");
 				return true;
 			}
 		}

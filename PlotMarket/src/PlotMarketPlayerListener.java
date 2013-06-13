@@ -24,6 +24,9 @@ public class PlotMarketPlayerListener extends PluginListener{
 			if (sign.getText(0).equals("§3[PlotMarket]")){
 				return destroyprocessor.processBlockHitEvent(player, block, sign);
 			}
+			if (sign.getText((0)).equalsIgnoreCase("§4[PlotMarket]")){
+				return exampleprocessor.processBlockHitEvent(player, block, sign);
+			}
 		}
 		return false;
 		
@@ -35,6 +38,9 @@ public class PlotMarketPlayerListener extends PluginListener{
 			Sign sign = (Sign)block.getWorld().getComplexBlock(block.getX(), block.getY(), block.getZ());
 			if (sign.getText(0).equals("§3[PlotMarket]")){
 				return clickprocessor.processSignClickEvent(player, sign);
+			}
+			if (sign.getText((0)).equalsIgnoreCase("§4[PlotMarket]")){
+				return exampleprocessor.processSignClickEvent(player, sign);
 			}
 		}
 		return false;

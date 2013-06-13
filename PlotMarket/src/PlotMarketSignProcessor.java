@@ -73,11 +73,11 @@ public class PlotMarketSignProcessor {
 				}
 			}
 			
-			if (!cuboids.isOwner(owner, area)){
+			if (!cuboids.isOwner(owner, area) && !owner.contains("Server") && !player.canUseCommand("/plotmarketadmin")){
 				if (owner.equalsIgnoreCase(player.getName())){
 					player.sendMessage(owner);
-				player.notify("§f[§3PlotMarket§f]§c - You dont own this land so you cant sell it!");}else{
-					player.notify("§f[§3PlotMarket§f]§c - The player on line 4 doesnt own this land so he cant sell it!");
+				player.notify("§f[§3PlotMarket§f]§c - You dont own this plot so you cant sell it!");}else{
+					player.notify("§f[§3PlotMarket§f]§c - The player on line 4 doesnt own this plot so he cant sell it!");
 				}
 				clearSign(sign);
 				return true;
@@ -99,10 +99,10 @@ public class PlotMarketSignProcessor {
 				}
 			}
 			
-			if (!cuboids2.isOwner(player.getWorld(), area, owner)){
+			if (!cuboids2.isOwner(player.getWorld(), area, owner) && !owner.contains("Server") && !player.canUseCommand("/plotmarketadmin")){
 				if (owner.equalsIgnoreCase(player.getName())){
-				player.notify("§f[§3PlotMarket§f]§c - You dont own this land so you cant sell it!");}else{
-					player.notify("§f[§3PlotMarket§f]§c - The player on line 4 doesnt own this land so he cant sell it!");
+				player.notify("§f[§3PlotMarket§f]§c - You dont own this plot so you cant sell it!");}else{
+					player.notify("§f[§3PlotMarket§f]§c - The player on line 4 doesnt own this plot so he cant sell it!");
 				}
 				clearSign(sign);
 				return true;
@@ -124,10 +124,10 @@ public class PlotMarketSignProcessor {
 				}
 			}
 				
-			if (!realms.isOwner(player, area)){
+			if (!realms.isOwner(player, area) && !owner.contains("Server") && !player.canUseCommand("/plotmarketadmin")){
 				if (owner.equalsIgnoreCase(player.getName())){
-				player.notify("§f[§3PlotMarket§f]§c - You dont own this land so you cant sell it!");}else{
-					player.notify("§f[§3PlotMarket§f]§c - The player on line 4 doesnt own this land so he cant sell it!");
+				player.notify("§f[§3PlotMarket§f]§c - You dont own this plot so you cant sell it!");}else{
+					player.notify("§f[§3PlotMarket§f]§c - The player on line 4 doesnt own this plot so he cant sell it!");
 				}
 				clearSign(sign);
 				return true;
